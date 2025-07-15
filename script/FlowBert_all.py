@@ -15,10 +15,10 @@ print(torch.cuda.is_available())
 print(torch.version.cuda)
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
-train_data = pd.read_csv("dataset/綜合特徵集.csv")
+train_data = pd.read_csv("dataset/Composite.csv")
 print(train_data["label"].value_counts(normalize=True))
 
-test_data = pd.read_csv("dataset//USTC特徵集.csv") #IoT23 USTC
+test_data = pd.read_csv("dataset//USTC.csv") #IoT23 USTC
 print(test_data["label"].value_counts(normalize=True))
 
 # 定義數值和文字特徵
