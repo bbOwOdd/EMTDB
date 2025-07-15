@@ -172,10 +172,4 @@ def compute_metrics(labels, preds):
 cross_validate_model(train_dataset, model, optimizer, criterion)
 test_loader = DataLoader(test_dataset, batch_size=16, shuffle=False)
 labels, preds = evaluate_model(test_loader, model)
-# compute_metrics(labels, preds)
-with open('USTC result.txt', 'w') as f:
-    f.write('labels=')   
-    f.write(str(labels))
-    f.write('\n') 
-    f.write('preds=')
-    f.write(str(preds))
+compute_metrics(labels, preds)
