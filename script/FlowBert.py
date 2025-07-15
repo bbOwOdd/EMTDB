@@ -160,10 +160,10 @@ def compute_metrics(labels, preds):
     print(f'Recall: {recall:.4f}')
     print(f'F1-score: {f1:.4f}')
 
-    # 繪製混淆矩陣
+    #繪製混淆矩陣
     cm = confusion_matrix(labels, preds)
-    plt.figure(figsize=(5,5))
-    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", cbar=False)
+    plt.figure(figsize=(8,6))
+    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", cbar=False, xticklabels=['0-malicious', '1-normal'], yticklabels=['0-malicious', '1-normal'])
     plt.title("Confusion Matrix")
     plt.ylabel("True Label")
     plt.xlabel("Predicted Label")
