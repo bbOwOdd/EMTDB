@@ -15,7 +15,7 @@ print(torch.cuda.is_available())
 print(torch.version.cuda)
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
-data = pd.read_csv("dataset/USTC特徵集.csv")
+data = pd.read_csv("dataset/CTU.csv")
 # data = data.sample(50)
 print(data["label"].value_counts(normalize=True))
 
